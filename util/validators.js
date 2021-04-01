@@ -42,3 +42,19 @@ module.exports.validateLoginInput = (username, password) => {
     valid: Object.keys(errors).length < 1,
   };
 };
+
+
+module.exports.validateFollower = (username, follower) => {
+  const errors = {};
+  if (username.trim() === "") {
+    errors.username = "Username must not be empty";
+  }
+  if (follower.trim() === "") {
+    errors.password = "Follower must not be empty";
+  }
+
+  return {
+    errors,
+    valid: Object.keys(errors).length < 1,
+  };
+};

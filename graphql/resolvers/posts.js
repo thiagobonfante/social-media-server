@@ -37,6 +37,7 @@ module.exports = {
         body,
         user: user.id,
         username: user.username,
+        userAvatar: user.avatar,
         createdAt: new Date().toISOString(),
       });
 
